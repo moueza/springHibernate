@@ -33,9 +33,10 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
 	public String listEmployees(ModelMap model) {
-
+		System.out.println("in AV AppController.listEmployees()");
 		List<Employee> employees = service.findAllEmployees();
 		model.addAttribute("employees", employees);
+		System.out.println("in AP AppController.listEmployees()");
 		return "allemployees";
 	}
 
