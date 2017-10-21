@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://stackoverflow.com/questions/25487116/log4j2-configuration-no-log4j2-configuration-file-found -->
+<!-- https://logging.apache.org/log4j/2.x/manual/configuration.html -->
+
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+
+
+	<category name="org.hibernate">
+		<priority value="info" />
+	</category>
+
+	<category name="java.sql">
+		<priority value="info" />
+	</category>
+
+
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
+
+
+
+
+
+
+
+
+<!-- # Direct log messages to a log file -->
+<!-- log4j.appender.file=org.apache.log4j.RollingFileAppender -->
+<!-- log4j.appender.file.File=C:\\mkyongapp.log -->
+<!-- log4j.appender.file.MaxFileSize=1MB -->
+<!-- log4j.appender.file.MaxBackupIndex=1 -->
+<!-- log4j.appender.file.layout=org.apache.log4j.PatternLayout -->
+<!-- log4j.appender.file.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L 
+	- %m%n -->
+
+<!-- # Direct log messages to stdout -->
+<!-- log4j.appender.stdout=org.apache.log4j.ConsoleAppender -->
+<!-- log4j.appender.stdout.Target=System.out -->
+<!-- log4j.appender.stdout.layout=org.apache.log4j.PatternLayout -->
+<!-- log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L 
+	- %m%n -->
+
+<!-- # Root logger option -->
+<!-- log4j.rootLogger=INFO, file, stdout -->
+
+<!-- # Log everything. Good for troubleshooting -->
+<!-- log4j.logger.org.hibernate=INFO -->
+
+<!-- # Log all JDBC parameters -->
+<!-- log4j.logger.org.hibernate.type=ALL -->

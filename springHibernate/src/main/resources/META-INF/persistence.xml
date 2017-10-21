@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	version="1.0">
+	<!-- QUE 1 FICHIER persistence.xml, QUE 1 unit -->
+	<!-- <persistence-unit transaction-type="RESOURCE_LOCAL" -->
+	<!-- name="hibernateunit"> -->
+
+	<!-- provider -->
+	<!-- <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
+	<!-- <properties> -->
+	<!-- Classes persistantes -->
+	<!-- <property name="hibernate.archive.autodetection" value="class, hbm" 
+		/> -->
+	<!-- <property name="hibernate.show_sql" value="true" /> -->
+ 
+	<!-- <property name="hibernate.format_sql" value="true" /> -->
+ 
+	<!-- <property name="use_sql_comments" value="true" /> -->
+ 
+	<!-- connexion JDBC -->
+	 
+	<!-- <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" 
+		/> -->
+	<!-- <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/beans" -->
+	<!-- /> -->
+ 
+	<!-- <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/beans" 
+		/> -->
+	<!-- <property name="hibernate.connection.username" value="moi" /> -->
+	<!-- <property name="hibernate.connection.password" value="moi" /> -->
+
+	<!-- création automatique du schéma -->
+	<!-- <property name="hibernate.hbm2ddl.auto" value="create" /> -->
+
+	<!-- Dialecte -->
+ 
+	<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" 
+		/> -->
+
+	<!-- propriétés DataSource c3p0 -->
+ 
+	<!-- <property name="hibernate.c3p0.min_size" value="5" /> -->
+	<!-- <property name="hibernate.c3p0.max_size" value="20" /> -->
+	<!-- <property name="hibernate.c3p0.timeout" value="300" /> -->
+	<!-- <property name="hibernate.c3p0.max_statements" value="50" /> -->
+	<!-- <property name="hibernate.c3p0.idle_test_period" value="3000" /> -->
+
+
+	<!-- https://www.eclipse.org/forums/index.php/t/461257/ -->
+ 
+	<!-- https://gist.github.com/halyph/2990769 -->
+ 
+	<!-- <property name="javax.persistence.jdbc.driver" value="com.mysql.Driver" 
+		/> -->
+	<!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tennisbdd" 
+		/> -->
+	<!-- <property name="javax.persistence.jdbc.user" value="moi" /> -->
+	<!-- <property name="javax.persistence.jdbc.password" value="moi" /> -->
+	<!-- EclipseLink should create the database schema automatically -->
+ 
+	<!-- <property name="eclipselink.ddl-generation" value="create-tables" /> -->
+	<!-- <property name="eclipselink.ddl-generation.output-mode" -->
+	<!-- value="database" /> -->
+	<!-- </properties> -->
+
+	<!-- </persistence-unit> -->
+
+
+
+
+
+
+	<persistence-unit transaction-type="RESOURCE_LOCAL"
+		name="jpaunit">
+
+		<!-- provider -->
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<!-- Classes persistantes -->
+			<property name="hibernate.archive.autodetection" value="class, hbm" />
+			 <property name="hibernate.show_sql" value="true" /> 
+			<!-- <property name="hibernate.format_sql" value="true" /> -->
+			<!-- <property name="use_sql_comments" value="true" /> -->
+			<!-- connexion JDBC -->
+<!-- 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" /> -->
+			<!--<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/beans" 
+				/> -->
+<!-- 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/beans" /> -->
+<!-- 			<property name="hibernate.connection.username" value="moi" /> -->
+<!-- 			<property name="hibernate.connection.password" value="moi" /> -->
+
+			<!-- création automatique du schéma -->
+ 			<property name="hibernate.hbm2ddl.auto" value="create" /> 
+
+			<!-- Dialecte -->
+ 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" /> 
+
+			<!-- propriétés DataSource c3p0 -->
+<!-- 			<property name="hibernate.c3p0.min_size" value="5" /> -->
+<!-- 			<property name="hibernate.c3p0.max_size" value="20" /> -->
+<!-- 			<property name="hibernate.c3p0.timeout" value="300" /> -->
+<!-- 			<property name="hibernate.c3p0.max_statements" value="50" /> -->
+<!-- 			<property name="hibernate.c3p0.idle_test_period" value="3000" /> -->
+
+
+			<!-- https://www.eclipse.org/forums/index.php/t/461257/ -->
+			<!-- https://gist.github.com/halyph/2990769            com.mysql.Driver -->
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tennisbdd" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="root" />
+			<!-- EclipseLink should create the database schema automatically -->
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+		</properties>
+
+	</persistence-unit>
+</persistence>

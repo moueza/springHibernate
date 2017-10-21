@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- https://www.mkyong.com/hibernate/quick-start-maven-hibernate-mysql-example/ -->
+<hibernate-mapping>
+    <class name="moueza.beans.Personne" table="personne" catalog="mkyong">
+        <id name="persId" type="java.lang.Integer">
+            <column name="PERSON_ID" />
+            <generator class="identity" />
+        </id>
+      
+        <property name="age" type="int">
+            <column name="PERSONNE_AGE" length="2" not-null="true" unique="false" />
+        </property>
+    </class>
+</hibernate-mapping>
