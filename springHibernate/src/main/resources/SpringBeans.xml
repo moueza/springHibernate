@@ -9,7 +9,15 @@
 <!-- 		<property name="name" value="Mkyong" /> -->
 <!-- 	</bean> -->
 
-	<bean id="beanPersonne" class="moueza.beans.Personne">
-		
+	<bean id="beanEmployee" class="com.websystique.springmvc.model.Employee">
+			
 	</bean>
+	
+	<bean name="viewResolver" class="com.websystique.springmvc.configuration.AppConfig"/>
+	<bean name="messageSource" class="com.websystique.springmvc.configuration.AppConfig"/>
+	
+<bean name="sessionFactory" class="com.websystique.springmvc.configuration.HibernateConfiguration"/>
+<bean name="dataSource" class="com.websystique.springmvc.configuration.HibernateConfiguration"/>
+<bean name="transactionManager" class="com.websystique.springmvc.configuration.HibernateConfiguration"/>
+	
 </beans>

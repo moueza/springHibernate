@@ -16,16 +16,16 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@Configuration
+//@Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.websystique.springmvc.configuration" })
+//@ComponentScan({ "com.websystique.springmvc.configuration" })
 @PropertySource(value = { "classpath:application.properties" })
 public class HibernateConfiguration {
 
 	@Autowired
 	private Environment environment;
 
-	@Bean
+	//@Bean
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource());
@@ -34,7 +34,7 @@ public class HibernateConfiguration {
 		return sessionFactory;
 	}
 
-	@Bean
+	//@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
@@ -52,7 +52,7 @@ public class HibernateConfiguration {
 		return properties;
 	}
 
-	@Bean
+	//@Bean
 	@Autowired
 	public HibernateTransactionManager transactionManager(SessionFactory s) {
 		HibernateTransactionManager txManager = new HibernateTransactionManager();

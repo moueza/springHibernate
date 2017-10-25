@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- https://www.mkyong.com/hibernate/quick-start-maven-hibernate-mysql-example/ -->
+<hibernate-mapping>
+
+<!-- http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd -->
+<!-- https://www.mkyong.com/hibernate/quick-start-maven-hibernate-mysql-example/ -->
+
+
+
+
+
+	<class name="moueza.beans.Personne" table="personne" catalog="mkyong">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+
+		<property name="name" type="string">
+			<column name="name" length="2" not-null="true" unique="false" />
+		</property>
+
+
+		<property name="joiningDate" type="date">
+			<column name="joiningDate" length="10" not-null="true" unique="false" />
+		</property>
+
+
+		<property name="salary" type="int">
+			<column name="salary" not-null="true" unique="false" />
+		</property>
+
+
+
+		<property name="ssn" type="int">
+			<column name="ssn" length="2" not-null="true" unique="false" />
+		</property>
+
+
+
+
+	</class>
+</hibernate-mapping>

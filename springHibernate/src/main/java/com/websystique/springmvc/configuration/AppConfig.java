@@ -10,12 +10,12 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-@Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "com.websystique.springmvc")
+//@Configuration
+//@EnableWebMvc
+//@ComponentScan(basePackages = "com.websystique.springmvc")
 public class AppConfig {
 
-	@Bean
+//	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setViewClass(JstlView.class);
@@ -24,7 +24,7 @@ public class AppConfig {
 		return viewResolver;
 	}
 
-	@Bean
+//	@Bean
 	public MessageSource messageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
 		messageSource.setBasename("messages");
