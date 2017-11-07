@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://www.mkyong.com/spring3/spring-3-hello-world-example/ -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- <bean id="helloBean" class="moueza.beans.HelloWorld"> -->
+	<!-- <property name="name" value="Mkyong" /> -->
+	<!-- </bean> -->
+
+	<bean id="beanEmployee" class="com.websystique.springmvc.model.Employee">
+
+	</bean>
+
+	<bean name="viewResolver" class="com.websystique.springmvc.configuration.AppConfig" />
+	<bean name="messageSource" class="com.websystique.springmvc.configuration.AppConfig" />
+
+	<bean name="sessionFactory"
+		class="com.websystique.springmvc.configuration.HibernateConfiguration" />
+	<bean name="dataSource"
+		class="com.websystique.springmvc.configuration.HibernateConfiguration" />
+	<bean name="transactionManager"
+		class="com.websystique.springmvc.configuration.HibernateConfiguration" />
+
+</beans>
