@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.websystique.springmvc.model.Employee;
-import com.websystique.springmvc.service.EmployeeService;
+import com.websystique.springmvc.services.EmployeeService;
 
 @Controller
 @RequestMapping("/")
